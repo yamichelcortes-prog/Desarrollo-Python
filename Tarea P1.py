@@ -1,5 +1,4 @@
 def pedir_numero(mensaje):
-
     while True:
         try:
             entrada = input(mensaje)
