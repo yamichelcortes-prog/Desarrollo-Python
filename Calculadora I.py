@@ -4,6 +4,11 @@ def sumar(a, b, c, d, e):
 def restar(a, b ):
     return a - b
 
+
+
+def hope ():
+    print ("Ingrese cinco ganancias:")
+
 def presentacion():
     print("--------------------------------------------")
     print("== Calculadora de ganancias == ")
@@ -25,20 +30,26 @@ while True:
 
         if opcion == "1":
            
-           n1 = float(input("Ingresa el primer número: "))
-           n2 = float(input("Ingresa el segundo número: "))
-           n3 = float(input("Ingresa el tercer número: "))
-           n4 = float(input("Ingresa el cuarto número: "))
-           n5 = float(input("Ingresa el quinto número: "))
+           print("\n--------------------------------------------")
+           hope()
+           n1 = float(input("1: "))
+           n2 = float(input("2: "))
+           n3 = float(input("3: "))
+           n4 = float(input("4: "))
+           n5 = float(input("5: "))
+           sum= sumar(n1, n2, n3, n4, n5)
 
-           print("\nResultado:", sumar(n1, n2, n3, n4, n5))
+           print(f"\nResultado: B/. {sum:.2f}")
 
 
         elif opcion == "2":
+            print("\n--------------------------------------------")
             nu1 = float(input("Ingrese el porcentaje que quiere restar: "))
             nu2 = float(input("Ingrese su ganancia total: "))
             result = nu1 / 100
-            print("\nResultado :", restar(nu2, result))
+            res = result * nu2
+            rest= restar  (nu2, res)
+            print (f"\n Resultado: B/. {rest:.2f}")
 
         else:
             print("Opción inválida")
@@ -47,6 +58,4 @@ while True:
 
     except ValueError:
       print("Error: Solo se permiten números.")
-
-
-  
+      
